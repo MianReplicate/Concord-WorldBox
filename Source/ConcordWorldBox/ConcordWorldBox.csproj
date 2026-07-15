@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <LangVersion>11</LangVersion>
+        <Nullable>disable</Nullable>
+        <OutputType>Library</OutputType>
+        <RootNamespace>Concord</RootNamespace>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <EmbedAllSources>true</EmbedAllSources>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <OutputPath>../../</OutputPath>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+        <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include=".github\ISSUE_TEMPLATE\bug-report-en.yaml"/>
+        <Content Include=".github\ISSUE_TEMPLATE\bug-report-zh.yaml"/>
+        <Content Include="default_config.json"/>
+        <Content Include="Locales\cz.json"/>
+        <Content Include="Locales\en.json"/>
+        <Content Include="mod.json"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" />
+        <PackageReference Include="Concord.Ref" Version="0.7.0" PrivateAssets="all" />
+        <Reference Include="Assembly-CSharp">
+            <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll')">..\..\..\..\worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll</HintPath>
+            <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\Mods\NML\Assembly-CSharp-Publicized.dll')">..\..\..\..\worldbox_Data\StreamingAssets\Mods\NML\Assembly-CSharp-Publicized.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="NeoModLoader">
+            <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\mods\NeoModLoader_memload.dll')">..\..\..\..\worldbox_Data\StreamingAssets\mods\NeoModLoader_memload.dll</HintPath>
+            <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\mods\NeoModLoader.dll')">..\..\..\..\worldbox_Data\StreamingAssets\mods\NeoModLoader.dll</HintPath>
+            <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\Mods\NeoModLoader_memload.dll')">..\..\..\..\worldbox_Data\StreamingAssets\Mods\NeoModLoader_memload.dll</HintPath>
+            <HintPath Condition="Exists('..\..\..\..\..\worldbox_Data\StreamingAssets\Mods\NeoModLoader.dll')">..\..\..\..\worldbox_Data\StreamingAssets\Mods\NeoModLoader.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>..\..\..\..\worldbox_Data\Managed\UnityEngine.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>..\..\..\..\worldbox_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+            <HintPath>..\..\..\..\worldbox_Data\Managed\UnityEngine.UI.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+</Project>

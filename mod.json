@@ -1,8 +1,8 @@
 {
-    "name": "CHANGEME",
-    "author": "CHANGEME",
+    "name": "Concord",
+    "author": "MianReplicate",
     "version": "1.0.0",
-    "description": "This is a template for a mod",
-    "RepoUrl": "https://github.com/author/name",
+    "description": "A runtime adapter to load the Concord assembly to aid in modding WorldBox",
+    "RepoUrl": "https://github.com/MianReplicate/Concord-WorldBox",
     "iconPath": "icon.png"
 }
