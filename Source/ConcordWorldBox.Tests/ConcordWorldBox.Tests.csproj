@@ -18,24 +18,6 @@
 
     <ItemGroup>
         <ProjectReference Include="../ConcordWorldBox/ConcordWorldBox.csproj" />
-        
-        <Reference Include="Assembly-CSharp">
-            <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll')">..\..\..\..\worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll</HintPath>
-            <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\Mods\NML\Assembly-CSharp-Publicized.dll')">..\..\..\..\worldbox_Data\StreamingAssets\Mods\NML\Assembly-CSharp-Publicized.dll</HintPath>
-            <Private>true</Private>
-        </Reference>
-        <Reference Include="UnityEngine">
-            <HintPath>..\..\..\..\worldbox_Data\Managed\UnityEngine.dll</HintPath>
-            <Private>true</Private>
-        </Reference>
-        <Reference Include="UnityEngine.CoreModule">
-            <HintPath>..\..\..\..\worldbox_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-            <Private>true</Private>
-        </Reference>
-        <Reference Include="UnityEngine.UI">
-            <HintPath>..\..\..\..\worldbox_Data\Managed\UnityEngine.UI.dll</HintPath>
-            <Private>true</Private>
-        </Reference>
     </ItemGroup>
     
 

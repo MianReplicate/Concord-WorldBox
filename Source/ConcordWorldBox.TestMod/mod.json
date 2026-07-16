@@ -1,0 +1,9 @@
+{
+    "name": "Concord TestMod",
+    "author": "MianReplicate",
+    "version": "1.0.0",
+    "description": "In-game verification harness for Concord. Not for normal use.",
+    "RepoUrl": "https://github.com/MianReplicate/Concord-WorldBox",
+    "iconPath": "icon.png",
+    "Dependencies": ["concordlib.concord"]
+}

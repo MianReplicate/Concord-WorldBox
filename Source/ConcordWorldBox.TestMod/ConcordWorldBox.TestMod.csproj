@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net48</TargetFramework>
         <LangVersion>11</LangVersion>
@@ -8,11 +8,11 @@
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <EmbedAllSources>true</EmbedAllSources>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <OutputPath>../../</OutputPath>
+        <OutputPath>../../../ConcordWorldBox.TestMod</OutputPath>
         <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
         <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" />
         <PackageReference Include="Concord.Ref" Version="0.7.0" PrivateAssets="all" />
@@ -41,4 +41,12 @@
             <Private>false</Private>
         </Reference>
     </ItemGroup>
+
+    <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+        <MakeDir Directories="../../../ConcordWorldBox.TestMod" Condition="!Exists('../../../ConcordWorldBox.TestMod')"/>
+
+        <Copy SourceFiles="$(ProjectDir)/mod.json" DestinationFolder="../../../ConcordWorldBox.TestMod/"/>
+        <Copy SourceFiles="$(ProjectDir)/icon.png" DestinationFolder="../../../ConcordWorldBox.TestMod/"/>
+
+    </Target>
 </Project>

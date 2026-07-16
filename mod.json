@@ -1,5 +1,6 @@
 {
     "name": "Concord",
+    "GUID": "concordlib.concord",
     "author": "MianReplicate",
     "version": "1.0.0",
     "description": "A runtime adapter to load the Concord assembly to aid in modding WorldBox",
