@@ -4,4 +4,4 @@ The WorldBox game adapter for [Concord](https://github.com/ConcordLib/Core). It 
 
 ## Runtime variant
 
-The mod ships the `net472` variant of `Concord.Runtime` as `Current/Assemblies/0Concord.dll`. That is the only variant whose merged MonoMod resolves `System.Reflection.Emit` from `mscorlib` under RimWorld's Unity Mono; the `netstandard2.0` variant references facade assemblies the game does not ship and hard-crashes at load. CI stages it from the `Concord.Runtime` version pinned in `Source/ConcordRimWorld.Tests/ConcordRimWorld.Tests.csproj`. When Core cuts a release, bump that pin so the staged variant follows.
+The mod ships the `net472` variant of `Concord.Runtime` as `Current/Assemblies/0Concord.dll`. That is the only variant whose merged MonoMod resolves `System.Reflection.Emit` from `mscorlib` under RimWorld's Unity Mono; the `netstandard2.0` variant references facade assemblies the game does not ship and hard-crashes at load.
