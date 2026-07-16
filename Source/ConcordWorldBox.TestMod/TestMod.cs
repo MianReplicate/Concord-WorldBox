@@ -4,6 +4,7 @@ namespace Concord;
 
 public class TestMod : BasicMod<TestMod>
 {
+    public static int DefaultHealth => 100;
     protected override void OnModLoad()
     {
         Patcher.Apply(typeof(TestMod).Assembly);
@@ -13,5 +14,13 @@ public class TestMod : BasicMod<TestMod>
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S3400", Justification = "Must be a method so Concord can patch it; the test probes the patched return value.")]
     public static float Threshold() {
         return 18f;
+    }
+    
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S3400", Justification = "Must be a method so Concord can patch it; the test probes the patched field.")]
+    public static int GetRealHealth()
+    {
+        var health = DefaultHealth;
+        TestMod.LogInfo("The health in here is " + health);
+        return health;
     }
 }

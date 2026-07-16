@@ -15,7 +15,7 @@
 
     <ItemGroup>
         <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" />
-        <PackageReference Include="Concord.Ref" Version="0.7.0" PrivateAssets="all" />
+        <PackageReference Include="Concord.Ref" Version="0.7.2" PrivateAssets="all" />
         <Reference Include="Assembly-CSharp">
             <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll')">..\..\..\..\worldbox_Data\StreamingAssets\mods\NML\Assembly-CSharp-Publicized.dll</HintPath>
             <HintPath Condition="Exists('..\..\..\..\worldbox_Data\StreamingAssets\Mods\NML\Assembly-CSharp-Publicized.dll')">..\..\..\..\worldbox_Data\StreamingAssets\Mods\NML\Assembly-CSharp-Publicized.dll</HintPath>

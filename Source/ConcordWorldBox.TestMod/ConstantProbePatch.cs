@@ -6,4 +6,10 @@ public abstract class ConstantProbePatch {
     private static float RaiseThreshold(float original) {
         return 20f;
     }
+    
+    [Inject(nameof(TestMod.GetRealHealth), typeof(TestMod), nameof(TestMod.DefaultHealth), At.Around)]
+    private static int GetDefaultHealthInGetHealth(Operation<int> read)
+    {
+        return read.Invoke() + 100;
+    }
 }

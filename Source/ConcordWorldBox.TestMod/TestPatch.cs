@@ -14,5 +14,6 @@ public abstract class TestPatch : MapBox {
         logged = true;
         TestMod.LogInfo("probe patch fired on MapBox.Update");
         TestMod.LogInfo("constant probe: Threshold() = " + TestMod.Threshold());
+        TestMod.LogInfo("constant probe: GetRealHealth() = " + TestMod.GetRealHealth());
     }
 }
